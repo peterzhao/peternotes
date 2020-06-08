@@ -12,9 +12,13 @@
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script defer src="mathjax-config.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
         <script defer src="app.js"></script>
         <script defer src="note-controller.js"></script>
         <script defer src="firebase-client.js"></script>
+        <script defer src="ng-mathjax.js"></script>
     </head>
     <body>
         <div ng-controller="NoteController">
@@ -38,6 +42,7 @@
                         </div>
                     </form>
                 </div>
+                <pre><span mathjax-bind="data.note"></span></pre>
             </div>
         </div>
     </body>
